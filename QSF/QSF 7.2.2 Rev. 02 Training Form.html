@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QSF 7.2.2 Training Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Bootstrap 4 Printing -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-print-css/css/bootstrap-print.min.css"
+        media="print">
+    <!-- Dependencies -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+        
+        <style>
+            @media print {
+              body {
+                width: 8.5in;
+                height: 11in;
+                margin: 0;
+                padding: 0;
+              }
+              #form form {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+              }
+            }
+          </style>
+
+
+</head>
+<br>
+<body id="body" style="background-color: whitesmoke;">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-md-auto d-print-none">
+                <div class="row sticky-top" style="top:30px">
+                    <button type="button" class="btn btn-primary" onclick="printDiv('form')">
+                        Print
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div id="form" class="form-control border-0 shadow-lg mx-auto d-print-block"
+                    style="min-width: 816px; max-width: 816px;">
+                    <div id="header" class="row">
+                        <div id="header_logo" class="col">
+                            <img class="rounded float-left" style="max-width: 225px;"
+                                src="https://lsgo.laminatedshim.ls:5025/images/Logos/Laminated_Shim_Logo_FINAL_LOGO_REFLEX_BLUE_REGISTER_Latest_Blue.png">
+                        </div>
+                        <div class="col">
+                            <span></span>
+                        </div>
+                        <div class="col" style="text-align: right;">
+                            <span>QSF 7.2.2 Rev. 02</span><br>
+                            <span>Training Form</span><br>
+                            <span>Effective: 11/13/2020</span><br>
+                        </div>
+                        <hr>
+                    </div>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item d-flex justify-content-center align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold"><u>Training Information</u></div>
+                                <br>
+                                <!-- Training Information Content -->
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text"
+                                                id="requestor-name">Requestor&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <input type="text" class="form-control" placeholder="" aria-label="Name"
+                                                aria-describedby="requestor-name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="request-date">Request Date</span>
+                                            <input id="request-date" class="form-control" type="date" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-3" colspan="2">
+                                        <span class="input-group-text" id="training-title">Training Title</span>
+                                        <input type="text" class="form-control" placeholder=""
+                                            aria-label="Training Title" aria-describedby="training-title">
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="row">
+                                    <!-- Reason for training -->
+                                    <div class="col">
+                                        <label for="training-reason">Reason for Training:</label>
+                                        <ul class="list-group" id="training-reason">
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                New process introduced or revised
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Request by supervisor or individual
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Audit or corrective action finding
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Non-conformance
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Customer complaint
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Other
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- training type -->
+                                    <div class="col">
+                                        <label for="training-type">Type of Training Received:</label>
+                                        <ul class="list-group" id="training-type">
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                On the job
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Request by supervisor or individual
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Outside certificate
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Self study
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Other
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <br>
+                                <!-- Training summary -->
+                                <div class="input-group" style="margin-bottom: 5px;">
+                                    <span class="input-group-text">Training Summary</span>
+                                    <textarea class="form-control" aria-label="Training summary"
+                                        style="height:15px"></textarea>
+                                </div>
+                                <!-- Training materials -->
+                                <div class="input-group" style="margin-bottom: 5px;">
+                                    <span class="input-group-text">Training Materials</span>
+                                    <textarea class="form-control" aria-label="Training Materials"
+                                        style="height:15px"></textarea>
+                                </div>
+                                <div class="list-group">
+                                    <label class="list-group-item border-0">
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        Training material copies attached to this record.
+                                    </label>
+                                </div>
+                                <!-- Training dates -->
+                                <div class="row" style="margin-bottom: 5px;">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="start-date">Start Date</span>
+                                            <input id="start-date" class="form-control" type="date" />
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="end-date">End Date</span>
+                                            <input id="end-date" class="form-control" type="date" />
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li id="training-effectiveness"
+                            class="list-group-item d-flex justify-content-center align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold"><u>Training Effectiveness</u></div>
+                                <br>
+                                <!-- Competency  -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="competency">Type of Training Competency Follow-up:</label>
+                                        <ul class="list-group" id="competency">
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Instructor Sign-Off
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Degree/Certificate/Credential
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Self-Study Test
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Observation of Training Implemented
+                                            </li>
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value=""
+                                                    aria-label="...">
+                                                Other
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                                <br>
+                                <div class="bg-info p-2 text-dark bg-opacity-25 border">
+                                    This training, as described in the training summary, has been performed and
+                                    completed. <br>
+                                    Records of training have been compiled as needed and competency has been confirmed
+                                    by the authority indicated below.
+                                </div>
+                            </div>
+
+                        </li>
+                        <li id="Training Attendance Sheet"
+                            class="list-group-item d-flex justify-content-center align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold"><u>Training Attendance Sheet</u></div>
+                                <br />
+                                <div class="row" style="width: 725px">
+                                    <datalist id="datalistOptions">
+                                    </datalist>
+                                    <table class="table table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Department</th>
+                                                <th scope="col">Title</th>
+                                                <th scope="col" style="display:none;">Id</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>
+                                                    <input class="form-control" list="datalistOptions" id="empName"
+                                                        placeholder="Type to search...">
+                                                </td>
+                                                <td> <input class="form-control" id="empDPT" readonly></td>
+                                                <td> <input class="form-control" id="empTitle" readonly></td>
+                                                <td> <input style="display:none;" id="empID" readonly></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col col-md-auto d-print-none">
+            </div>
+        </div>
+    </div>
+
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-exclamation-triangle"></i>         
+                <strong class="me-auto">Not Found</strong>
+                <small>Just Now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              Employee name not found.
+            </div>
+          </div>
+    </div>
+
+
+    <script>
+        const datalist = document.querySelector('#datalistOptions');
+
+        datalist.innerHTML = '';
+
+        var data;
+
+        async function fetchData() {
+            const sql = "SELECT employee.em_emp_id,employee.em_emp_name,employee.em_position,ac_dept.de_desc \
+                         FROM employee INNER JOIN ac_dept ON employee.em_dept_code = ac_dept.de_id"
+            const url = 'http://192.168.0.147:81/api/Vet?SelectQuery=' + sql;
+            const encoded = encodeURI(url)
+            const response = await fetch(encoded)
+            data = await response.json();
+            //return data;
+        }
+
+        async function main() {
+            //const data = await fetchData();
+            await fetchData();
+
+            data.forEach((item, index) => {
+
+                const option = `<option value="${item.em_emp_name.trim().toUpperCase()}"></option>`;
+                datalist.insertAdjacentHTML('beforeend', option);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            main();
+        });
+
+        // Add event listener to input field with ID "empName"
+        const empNameInput = document.getElementById('empName');
+        const empDPTInput = document.getElementById('empDPT');
+        const empTitleInput = document.getElementById('empTitle');
+        const empIDInput = document.getElementById('empID');
+
+        empNameInput.addEventListener('change', async () => {
+            const selectedName = empNameInput.value;
+
+            // Find matching record for selected name
+            const selectedRecord = data.find(record => record.em_emp_name.trim().toUpperCase() === selectedName);
+
+            if (!selectedRecord) {
+                // Show alert and clear input field
+                const myToast = document.getElementById('myToast');
+
+                // Show the toast
+                const showToast = () => {
+                    const toast = new bootstrap.Toast(myToast);
+                    toast.show();
+                }
+                showToast();
+
+                empNameInput.value = '';
+                empDPTInput.value = '';
+                empTitleInput.value = '';
+                empIDInput.value = '';
+                return;
+            }
+
+            // Set Department and Title fields based on selected record
+            empDPTInput.value = selectedRecord.de_desc.trim().toUpperCase();
+            empTitleInput.value = selectedRecord.em_position.trim().toUpperCase();
+            empIDInput.value = selectedRecord.em_emp_id.trim().toUpperCase();
+        });
+
+
+
+        //fillTable(data);
+
+        function printDiv(divName) {
+            window.jsPDF = window.jspdf.jsPDF;
+            const doc = new jsPDF("p", "pt", "a4");
+            const div = document.getElementById(divName);
+
+            // Use html2canvas to convert the div to an image
+            html2canvas(div).then(canvas => {
+                // Add the image to the PDF
+                const imgData = canvas.toDataURL();
+                doc.addImage(imgData, 'JPEG', 10, 10, 180, 240);
+
+                // Save and download the PDF
+                doc.save('my-div.pdf');
+            });
+
+
+
+
+            // var printContents = document.getElementById(divName).innerHTML;
+            // var originalContents = document.body.innerHTML;
+
+            // document.body.innerHTML = printContents;
+
+            // await window.print();
+
+            // document.body.innerHTML = originalContents;
+        }
+    </script>
+</body>
+
+</html>
